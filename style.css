@@ -1,0 +1,258 @@
+@charset "UTF-8";
+
+/* --- 基本設定 --- */
+:root {
+    --primary-color: #3498db;
+    --text-color: #333;
+    --background-color: #fff;
+    --light-gray-bg: #f7f9fa;
+    --font-family: 'Yu Gothic', 'YuGothic', 'Hiragino Kaku Gothic ProN', 'メイリオ', 'Meiryo', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section, footer {
+    padding: 80px 0;
+    text-align: center;
+}
+
+section:nth-of-type(odd) {
+    background-color: var(--light-gray-bg);
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    line-height: 1.4;
+}
+
+/* --- ボタン共通スタイル --- */
+.cta-button, .cta-button-final, .secondary-cta .cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover, .cta-button-final:hover, .secondary-cta .cta-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* --- 1. ファーストビュー --- */
+#fv {
+    padding: 120px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('LPgazou.png'); /* Overlay for text readability */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; /* Change text color to white for contrast */
+}
+#fv .fv-heading, #fv .fv-subcopy {
+    color: #fff; /* Ensure text is white over the image */
+}
+
+.fv-heading {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.fv-subcopy {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+/* --- 2. 選ばれる理由 --- */
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.reason-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.reason-item h3 {
+    margin-top: 15px;
+}
+
+/* --- 3. 技術変革 --- */
+#technology {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('LPgazou2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; /* Text color for the section */
+}
+
+#technology .section-heading {
+    color: #fff; /* Ensure heading is white */
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: left;
+}
+
+.tech-card {
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white for cards */
+    border: 1px solid #eee;
+    padding: 30px;
+    border-radius: 8px;
+    color: var(--text-color); /* Reset text color for cards */
+}
+
+.tech-card h4 {
+    font-size: 1.2rem;
+    color: var(--primary-color); /* Keep primary color for card titles */
+}
+
+
+/* --- 4. 成長ストーリー --- */
+#growth-story .story-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    text-align: left;
+}
+
+.episode {
+    background-color: var(--light-gray-bg);
+    padding: 30px;
+    border-left: 5px solid var(--primary-color);
+}
+
+/* --- 5. 強靭な基盤 --- */
+.foundation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    text-align: left;
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 50px;
+}
+
+.salary-highlight {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.salary-highlight span {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+/* --- 6. クロージング --- */
+#closing {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+#closing .section-heading, #closing h3 {
+    color: #fff;
+}
+
+.president-message {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.action-proposal {
+    display: inline-block;
+    text-align: left;
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+.action-proposal ul {
+    list-style-type: '✔ ';
+    padding-left: 20px;
+}
+.action-proposal li {
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.final-message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.cta-button-final {
+    background-color: #ffc107;
+    color: var(--text-color);
+}
+.cta-button-final:hover {
+    background-color: #ffca2c;
+}
+
+/* --- レスポンシブデザイン --- */
+@media (max-width: 768px) {
+    .section-heading {
+        font-size: 2rem;
+    }
+
+    .fv-heading {
+        font-size: 2.5rem;
+    }
+
+    .reasons-grid,
+    .tech-grid,
+    #growth-story .story-content,
+    .foundation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #growth-story .story-content,
+    .foundation-grid {
+        text-align: center;
+    }
+
+    .tech-card,
+    .foundation-grid {
+        text-align: center;
+    }
+}
